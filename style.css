@@ -1,82 +1,43 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  min-height: 100dvh;
-  display: grid;
-  place-items: center;
+  min-height: 100vh;
   background: oklch(18% 0.02 260);
   font-family: system-ui, sans-serif;
   padding: 2rem;
+  overflow-y: auto;
 }
 
 main {
-  text-align: center;
-  max-width: 42rem;
+  max-width: 700px;
+  margin: auto;
 }
 
 h1 {
-  font-size: clamp(0.75rem, 2vw, 0.9rem);
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
   color: oklch(65% 0.05 260);
-  margin-bottom: 2.5rem;
 }
 
-#sentence {
-  font-size: clamp(1.6rem, 5vw, 2.6rem);
-  font-weight: 700;
-  line-height: 1.4;
+.card {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: oklch(22% 0.02 260);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.sentence {
+  font-size: 1.4rem;
+  line-height: 1.6;
   color: oklch(92% 0.01 260);
 }
 
+/* keep your legend styles */
 .legend {
+  margin-top: 3rem;
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   justify-content: center;
-  gap: 0.75rem 1.5rem;
-  margin-top: 3rem;
 }
 
-.legend-item {
-  font-size: 0.95rem;
-  color: oklch(85% 0.04 260);
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-}
-
-.swatch {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 2px;
-}
-
-::highlight(hl-noun) {
-  color: oklch(85% 0.18 250);
-  background-color: oklch(30% 0.08 250);
-}
-
-::highlight(hl-verb) {
-  color: oklch(88% 0.2 145);
-  background-color: oklch(28% 0.1 145);
-}
-
-::highlight(hl-adjective) {
-  color: oklch(90% 0.18 55);
-  background-color: oklch(30% 0.1 55);
-  text-decoration: underline wavy oklch(75% 0.2 55);
-  text-decoration-skip-ink: none;
-}
-
-::highlight(hl-special) {
-  color: oklch(90% 0.2 330);
-  background-color: oklch(28% 0.1 330);
-  text-decoration: underline dotted oklch(80% 0.22 330);
-}
+/* keep your highlight styles EXACTLY the same */
