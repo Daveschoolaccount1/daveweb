@@ -41,3 +41,23 @@ h1 {
 }
 
 /* keep your highlight styles EXACTLY the same */
+::highlight(hl-traits) {
+  color: oklch(85% 0.18 250);
+  background: oklch(30% 0.08 250);
+}
+
+::highlight(hl-actions) {
+  color: oklch(88% 0.2 145);
+  background: oklch(28% 0.1 145);
+}
+
+::highlight(hl-values) {
+  color: oklch(90% 0.18 55);
+  background: oklch(30% 0.1 55);
+  text-decoration: underline wavy oklch(75% 0.2 55);
+}
+
+::highlight(hl-identity) {
+  color: oklch(90% 0.2 330);
+  background: oklch(28% 0.1 330);
+}
